@@ -1,21 +1,13 @@
 
 // Hamburger Menu
-$(".cross").hide();
-$(".menu").hide();
-$(".hamburger").click(function() {
-  $(".menu").slideToggle("slow", function() {
-    $(".hamburger").hide();
-    $(".cross").show();
+
+$(function(){
+  $('.navbar-toggle, .nav').click(function(){
+    $('.navbar-toggle').toggleClass('navbar-on');
+    $(".nav").fadeToggle();
+    $(".nav").removeClass('nav-hide');
   });
 });
-
-$(".cross").click(function() {
-  $(".menu").slideToggle("slow", function() {
-    $(".cross").hide();
-    $(".hamburger").show();
-  });
-});
-
 // Sticky Navigation color
 
 $(window).on("scroll", function() {
@@ -26,3 +18,4 @@ $(window).on("scroll", function() {
        $('nav').removeClass("active");
     }
 });
+
